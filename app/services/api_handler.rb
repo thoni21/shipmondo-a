@@ -67,7 +67,8 @@ class ApiHandler
       }
 
       options = {
-        body: body,
+        body: body.to_json,
+        headers: { "Content-Type" => "application/json" },
         basic_auth: @auth
       }
 
